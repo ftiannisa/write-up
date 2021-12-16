@@ -1,2 +1,2 @@
-# WRITE UP FOR CTFR - RasyidMF
-Link: https://rasyidmf.com/
+# WRITE-UP FOR CTFR - RasyidMF
+Website: https://rasyidmf.com/
