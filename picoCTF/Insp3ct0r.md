@@ -5,12 +5,12 @@
 Kishor Balan tipped us off that the following code may need inspection: https://jupiter.challenges.picoctf.org/problem/41511/ ([link](https://jupiter.challenges.picoctf.org/problem/41511/)) or http://jupiter.challenges.picoctf.org:41511
 <br><br>
 ### Solution:
-:indonesia: Untuk challenge ini, langsung aja dibuka link webnya. Kalo udah, klik tombol F12 atau bisa juga klik kanan > Inspect. Bisa diliat di tab Elements (atau bisa langsung cek tab Source > file (index))sudah tampil kode HTMLnya dan dari sini kita bisa dapat 1/3 flagnya
+:indonesia: Untuk challenge ini, langsung aja dibuka link webnya. Kalo udah, klik tombol F12 atau bisa juga klik kanan > Inspect. Bisa diliat di tab Elements (atau bisa langsung cek tab Source > file (index)) sudah tampil kode HTMLnya dan dari sini kita bisa dapat 1/3 flagnya
 <p align="center">
     <img src="https://github.com/ftiannisa/writeup/blob/main/media/pico-ins1.png?raw=true"/>
 </p>
 Flag 1/3: picoCTF{tru3_d3 <br>
-Lanjut, sekarang kita pindah ke tab Source lalu klik file myjs.js. Di sini terlihat pada baris terakhir sudah ada potongan flag yang ketiga
+Lanjut, sekarang kita pindah ke tab Sources lalu klik file myjs.js. Di sini terlihat pada baris terakhir sudah ada potongan flag yang ketiga
 <p align="center">
     <img src="https://github.com/ftiannisa/writeup/blob/main/media/pico-ins2.png?raw=true"/>
 </p>
@@ -28,7 +28,7 @@ Semua potongan flagnya sudah ada, sekarang tinggal digabungin aja. Gabunginnya s
     <img src="https://github.com/ftiannisa/writeup/blob/main/media/pico-ins1.png?raw=true"/>
 </p>
 Flag 1/3: picoCTF{tru3_d3 <br>
-Now, switch to the Source tab and click myjs.js file. See the last line of the code and you'll get the 3/3 of the flag
+Now, switch to the Sources tab and click myjs.js file. See the last line of the code and you'll get the 3/3 of the flag
 <p align="center">
     <img src="https://github.com/ftiannisa/writeup/blob/main/media/pico-ins2.png?raw=true"/>
 </p>
