@@ -3,4 +3,4 @@
 Website: https://play.picoctf.org/practice
 
 Category:
-- Web
+- [Web](https://github.com/ftiannisa/write-up/tree/main/picoCTF/Web)
