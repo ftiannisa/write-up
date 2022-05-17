@@ -16,4 +16,4 @@ Websites for practice:
 Contact:
 [![DM me on Twitter](https://img.shields.io/badge/DM%20me%20on%20Twitter-1DA1F2?style=flat-square&logo=twitter&logoColor=white)](https://twitter.com/ftiannisa)
 [![email](https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:firstiannisa.02@gmail.com?subject=Github%20Write-up%20Inquiry)
-[![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white)](discordapp.com/users/304624004080074763)
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/users/304624004080074763)
