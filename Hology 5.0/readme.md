@@ -7,7 +7,7 @@ House of Technology (HOLOGY) merupakan kegiatan di bidang Teknologi Informasi da
 
 Quals: 5 Nov. 2022
 
-
+Final: 12 Nov. 2022
 
 
 Category:
