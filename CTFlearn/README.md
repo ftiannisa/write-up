@@ -1,8 +1,14 @@
 # WRITE-UP FOR CTFlearn
+
 <b>by [verreaux](https://ctflearn.com/user/verreaux)</b><br><br>
 Website: https://ctflearn.com/
 
 Category:
-- [Web](https://github.com/ftiannisa/write-up/tree/main/CTFlearn/Web)
-- [Cryptography](https://github.com/ftiannisa/write-up/tree/main/CTFlearn/Cryptography)
-- [Miscellaneous](https://github.com/ftiannisa/write-up/tree/main/CTFlearn/Misc)
+
+- [Web](/CTFlearn/Web/)
+- [Miscellaneous](/CTFlearn/Misc)
+
+|            Category             | Challenges                                                                                                                                           |
+| :-----------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
+|      [Web](/CTFlearn/Web/)      | - [Basic Injection](/CTFlearn/Web/Basic%20Injection/)<br>- [My Blog](/CTFlearn/Web/My%20Blog/)<br> - [POST Practice](/CTFlearn/Web/POST%20Practice/) |
+| [Miscellaneous](/CTFlearn/Misc) | [Get Into Command Mission](/CTFlearn/Misc/Get%20Into%20Command%20Mission/)                                                                           |

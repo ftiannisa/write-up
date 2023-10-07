@@ -1,17 +1,27 @@
 # Write-up
+
 (badly written) Write-up for CTF challenges solved by me, a total noob
 
-Language: :indonesia: Indonesia <s><i>(will probably write the English version someday in the future)</i></s><br>
-This is for archival and educational purpose.
+Language: :indonesia: mostly Indonesian <s><i>(will probably write the English version someday in the future)</i></s><br>
+**This is for archival and educational purpose.**
 
 Websites for practice:
+
 - [Root.Me](https://www.root-me.org/?page=news&lang=en)
-- [CTFR - Rasyid](https://github.com/ftiannisa/writeup/tree/main/CTFR)
-- [CTFlearn](https://github.com/ftiannisa/writeup/tree/main/CTFlearn)
-- [OverTheWire](https://overthewire.org/wargames/)
-- [picoCTF](https://github.com/ftiannisa/writeup/tree/main/picoCTF)
+- [CTFR - Rasyid](/CTFR/)
+- [CTFlearn](/CTFlearn/)
+- [OverTheWire](/OverTheWire/)
+- [picoCTF](/picoCTF/)
 - [echoCTF](https://echoctf.red/)
 
+## Past CTF
+
+| YEAR   | CTF                                                                                                                                                                         |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 🚩2021 | - [MetaRed 2021 - 5th Stage](/MetaRed%202021%20-%205th%20Stage/), CTFTime <br> - [Hackfest0x5](/Hackfest0x5/), Local                                                        |
+| 🚩2022 | - [Hology 5.0](/Hology%205.0/), Local <br> - [Fostifest](/Fostifest%202022/), Local<br> - [PekanIT](/Pekan%20IT%202022/), Local <br> - [Gemastik](/Gemastik%202022/), Local |
+
+<br>
 
 Contact:
 [![DM me on Twitter](https://img.shields.io/badge/DM%20me%20on%20Twitter-1DA1F2?style=flat-square&logo=twitter&logoColor=white)](https://twitter.com/ftiannisa)

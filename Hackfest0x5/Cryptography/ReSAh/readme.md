@@ -1,11 +1,14 @@
 # ReSAh
+
 ### Category: Cryptography
+
 ###### author: twistbil
 
 katanya sih ini salah satu challenge paling common di crypto
 
 - chall.py
-```
+
+```py
 from Crypto.Util.number import getPrime, isPrime, bytes_to_long
 from secret import flag
 
@@ -26,16 +29,22 @@ c :{}
 '''.format(n, e, c))
 w.close()
 ```
+
 - yupps.txt
+
 ```
 n :49395104140655658514748571842080326914292796936916928698864042986374411298172218017902749917436512276989151397882527274877230879505860589222329619862809739982766514159792938698753211409320684569464486446070544232700671329040497669816428170571531694983615346689735470529160952805280642456928633093385042290903
 e :65537
 c :30781133348334449003346660743488576896189374900675641186739706292512857823016060656024278245283188842883530944647636039309667044428404383073597120995244881437966593912379874459080502668399875256503185287402082539930387628744251784107740046626292203599846152655564451412867273342609548028692795413644948191855
 ```
+
 <br><br>
+
 ### Solution:
+
 Di dalam file txt tersebut, disediakan nilai n, e, dan c. Untuk melakukan faktorisasi n, saya menggunakan fungsi factorint() dari library sympy.ntheory. Berikut kode lengkapnya
-```
+
+```py
 from Crypto.Util.number import *
 from Crypto.PublicKey import RSA
 from sympy.ntheory import factorint
@@ -65,3 +74,10 @@ print(long_to_bytes(msg)) #convert to byte string and print output
   hackfest0x5{nev3r_use_2_cl0se_pr1me_in_rSa}
 
 </details>
+
+<br><br>
+🏷️tags: RSA, close prime
+
+### References
+
+- [RSA (Wikipedia)](https://id.wikipedia.org/wiki/RSA#Pembuatan_Kunci)
