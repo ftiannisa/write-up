@@ -2,7 +2,7 @@
 
 (badly written) Write-up for CTF challenges solved by me, a total noob
 
-Language: :indonesia: mostly Indonesian <s><i>(will probably write the English version someday in the future)</i></s><br>
+Language: English and (mostly) Indonesian :indonesia:<br>
 **This is for archival and educational purpose.**
 
 Websites for practice:
@@ -10,9 +10,12 @@ Websites for practice:
 - [Root.Me](https://www.root-me.org/?page=news&lang=en)
 - [CTFR - Rasyid](/CTFR/)
 - [CTFlearn](/CTFlearn/)
-- [OverTheWire](/OverTheWire/)
 - [picoCTF](/picoCTF/)
 - [echoCTF](https://echoctf.red/)
+- [Cryptohack](https://cryptohack.org/) [Crypto]
+- [pwn.college](/pwn.college/) [PWN]
+- [Lord of SQLInjection](https://los.rubiya.kr) [SQLI]
+- [OverTheWire](/OverTheWire/) [Wargame]
 
 ## Past CTF
 

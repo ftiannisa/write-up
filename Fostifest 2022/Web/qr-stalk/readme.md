@@ -4,16 +4,14 @@
 
 http://35.85.47.15:8001/
 
-- [Downloadable](/Fostifest%202022/Web/qr-stalk/app-peserta.zip)
+- [app-peserta.zip](/Fostifest%202022/Web/qr-stalk/app-peserta.zip)
   <br><br>
 
 ### Solution:
 
 Terdapat sebuah tampilan web seperti berikut yang meminta kita untuk mengupload QR code.
 
-<p align="center">
-    <img src="../../../media/fosti-qr-stalk.png"/>
-</p>
+![](/media/fosti-qr-stalk.png)
 
 Berdasarkan hint yang diberikan, challenge ini merupakan challenge SSRF yang menggunakan layanan AWS, khususnya Elastic Beanstalk. Menggunakan [referensi ini](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Request%20Forgery#ssrf-url-for-aws-elastic-beanstalk), saya membuat dua QR code. QR yang pertama berisi url (http://169.254.169.254/latest/dynamic/instance-identity/document) untuk mendapatkan accountId dan region
 
@@ -32,27 +30,21 @@ sedangkan QR kedua berisi url (http://169.254.169.254/latest/meta-data/iam/secur
 Lalu akses S3 bucket dengan command
 `aws s3 ls s3://elasticbeanstalk-[REGION]-[ACCOUNT_ID]/` seperti berikut.
 
-<p align="center">
-    <img src="../../../media/fosti-qr-stalk3.png"/>
-</p>
+![](/media/fosti-qr-stalk3.png)
 
 Sebelum diakses, kita perlu melakukan konfigurasi credentials menggunakan command
 `aws configure`. Berikut isi dari file credentials.
 
-<p align="center">
-    <img src="../../../media/fosti-qr-stalk4.png"/>
-</p>
+![](/media/fosti-qr-stalk4.png)
+
 Lalu akses kembali bucketnya dan terlihat ada 1 file flag di dalam bucket tersebut.
-<p align="center">
-    <img src="../../../media/fosti-qr-stalk5.png"/>
-</p>
+
+![](/media/fosti-qr-stalk5.png)
 
 Untuk mendapatkan isi dari file tersebut, saya menggunakan bantuan s3streamcat yang dapat diinstall menggunakan command
 `pip install s3streamcat`.
 
-<p align="center">
-    <img src="../../../media/fosti-qr-stalk6.png"/>
-</p>
+![](/media/fosti-qr-stalk6.png)
 
 <br>
 <br>

@@ -1,6 +1,7 @@
 # WRITE-UP FOR picoCTF
 
-<b>by klarsynt</b><br><br>
+**by [klarsynt](https://play.picoctf.org/users/klarsynt)**
+
 Website: https://play.picoctf.org/practice
 
 Category:

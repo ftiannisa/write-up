@@ -5,21 +5,20 @@
 ###### author: rafipriatna
 
 Ada yang membajak komputerku, nih. Untung komputerku ada logger keyboardnya. Tolong bantu aku mencari tahu apa yang dilakukan pembajaknya di komputerku.
-<br>
-[logger.pcapng](/Hackfest0x5/Forensic/Logger/logger.pcapng)
-<br><br>
+
+- [logger.pcapng](/Hackfest0x5/Forensic/Logger/logger.pcapng)
+  <br><br>
 
 ### Solution:
 
 Buka file pcapng menggunakan wireshark, lalu pilih menu Statistics \> Capture File Properties untuk melihat properti file.
 
-<p align="center"> 
-    <img src="../../../media/hf05-log1.png">
-</p>
+![](/media/hf05-log1.png)
+
 Di sini kita dapat melihat terdapat 17422 paket yang diterima dan waktu yang dibutuhkan yaitu selama 1 menit 25 detik. Selanjutnya, saya coba melihat Protocol Hierarchynya
-<p align="center">
-    <img src="../../../media/hf05-log2.png"/>
-</p>
+
+![](/media/hf05-log2.png)
+
 Terlihat 0,7% paket merupakan text item, lalu saya Apply as Filter. Namun setelah dilihat-lihat, tidak ada clue atau flag yang dicari.
 Kemudian saya memasukkan filter berikut
 
@@ -27,13 +26,12 @@ Kemudian saya memasukkan filter berikut
 usb.transfer_type == 0x01 and frame.len == 35 and !(usb.capdata == 00:00:00:00:00:00:00:00)
 ```
 
-\*_) usb.transfer_type == 0x01 digunakan untuk menampilkan jenis transfer data Interrupt yang biasanya digunakan pada mouse dan keyboard. (0 → isochronous, 1 → interrupt, 2 → control, 3 → bulk)._ [^1] <br>
+\*_) usb.transfer_type == 0x01 digunakan untuk menampilkan jenis transfer data Interrupt yang biasanya digunakan pada mouse dan keyboard. (0 → isochronous, 1 → interrupt, 2 → control, 3 → bulk)._ [^1]
 
 Kemudian tambahkan Leftover Capture Data sebagai kolom sehingga tampilannya menjadi seperti berikut
 
-<p align="center">
-    <img src="../../../media/hf05-log3.png"/>
-</p>
+![](/media/hf05-log3.png)
+
 Selanjutnya, export hasilnya sebagai file csv lalu jalankan command berikut untuk mendapat nilai hex dari Leftover Capture Data
 
 ```
@@ -44,15 +42,12 @@ Kemudian saya membuat kode Python yang bisa dilihat [DI SINI](/Hackfest0x5/Foren
 
 <i>\*) referensi keymap pada kode program dapat dilihat di file [ini](https://www.usb.org/sites/default/files/documents/hut1_12v2.pdf) (halaman 53)</i>
 
-<p align="center">
-    <img src="../../../media/hf05-log4.png"/>
-</p>
+![](/media/hf05-log4.png)
 
 Bila diperhatikan outputnya, terdapat sebuah link yang jika ditulis ulang menjadi seperti berikut: https://bit.ly/3HXKM88 yang menuju ke situs Mega, layanan cloud dan hosting, dan isinya adalah file zip bernama flag. File zip tersebut memiliki file flag.txt di dalamnya. Setelah saya download dan buka filenya, ternyata file tersebut memerlukan password. Tadinya saya mau coba metode brute force tapi saya rasa hint passwordnya bisa saja sudah diberikan. Perhatikan lagi output di atas, setelah link bit.ly terdapat 2 buah string, yaitu "apaniapaayaaa" dan "swiwiwiwiiwwiuuuu". Pertama, saya coba "swiwiwiwiiwwiuuuu" tapi tidak bisa, lalu saya coba "apaniapaayaaa" dan akhirnya saya bisa mendapatkan file flag.txt-nya.
 
-<p align="center">
-    <img src="../../../media/hf05-log5.png"/>
-</p>
+![](/media/hf05-log5.png)
+
 <br><br>
 
 ### FLAG

@@ -1,10 +1,12 @@
-# [Bandit](httsh://overthewire.org/wargames/bandit/)
+# [Bandit](https://overthewire.org/wargames/bandit/)
 
 > ⚠️ DISCLAIMER ⚠️\
 > This write-up is for archival and educational purpose. I really encourage you to try first and read any materials given in the lab. Use this write-up as your last resort.\
 > Happy learning and good luck! :) –fr.🔮
 
-Status: Incomplete, Current Level: 15
+![](https://progress-bar.dev/61/?title=Incomplete&width=150)
+
+Level: 20/33
 
 ## Contents.
 
@@ -28,6 +30,11 @@ Status: Incomplete, Current Level: 15
   - [Level 13 → Level 14](#level-13--level-14)
   - [Level 14 → Level 15](#level-14--level-15)
   - [Level 15 → Level 16](#level-15--level-16)
+  - [Level 16 → Level 17](#level-16--level-17)
+  - [Level 17 → Level 18](#level-17--level-18)
+  - [Level 18 → Level 19](#level-18--level-19)
+  - [Level 19 → Level 20](#level-19--level-20)
+  - [Level 20 → Level 21](#level-20--level-21)
 </details>
 
 ## Level 0
@@ -170,7 +177,7 @@ $ sort data.txt | uniq -u
 
 Read human-readable strings, search word in file.
 
-commands: `strings`, `grep`
+commands: `strings <filename>`, `grep`
 
 ```sh
 $ strings data.txt | grep ==
@@ -207,11 +214,11 @@ $ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 
 ## Level 12 → Level 13
 
-- Extracting files.
+- Extract files.
 - Convert hexdump to binary.
 - Make new directory, copy datafile, rename file.
 
-commands: `gzip`, `bzip2 -d` or `bunzip2`, `tar`, `xxd`, `mkdir`, `cp`, `mv`
+commands: `gzip`, `bzip2 -d` or `bunzip2`, `tar -xf`, `xxd`, `mkdir`, `cp <source> <directory>`, `mv <source> <directory>`
 
 ```sh
 # make new dir and change dir
@@ -253,7 +260,7 @@ _**Tips**: use `ls` to see what files have been created after extracting a file 
 
 Connect SSH using private key.
 
-commands: `ssh`
+commands: `ssh -i`
 
 ```sh
 $ ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
@@ -266,7 +273,7 @@ bandit14@bandit:~$ cat /etc/bandit_pass/bandit14
 
 ## Level 14 → Level 15
 
-Sending data to host.
+Connect and send data over a network connection.
 
 commands: `echo`, `nc <host> <port>`
 
@@ -284,7 +291,7 @@ $ echo [password] | nc 127.0.0.1 30000
 
 ## Level 15 → Level 16
 
-Sending data using SSL encryption.
+Send data using SSL encryption.
 
 commands: `openssl s_client`, `echo`
 
@@ -296,6 +303,96 @@ $ echo [password] | openssl s_client -connect 127.0.0.1:30001 -ign_eof
 [source](https://stackoverflow.com/questions/23352152/how-to-send-a-string-to-server-using-s-client)
 
 <!-- JQttfApK4SeyHwDlI9SXGR50qclOAil1 -->
+<br>
+
+## Level 16 → Level 17
+
+Scan network within port range.
+
+commands: `nmap`
+
+```sh
+$ nmap -sV localhost -p31000-32000 # or `nmap -A -T4`
+$ echo [password] | openssl s_client -connect localhost:31790 -ign_eof
+
+# copy the creds to a new key file then connect to bandit17
+# if there's a "<key> are too open" error,
+# run this and connect again
+$ chmod 400 <key_filename>
+```
+
+> `nmap -sV`: determine service/version info \
+> `nmap -A`: enable OS and version detection, script scanning, and traceroute \
+> `nmap -T4`: (optional?) faster execution
+
+[soure](https://manpages.ubuntu.com/manpages/lunar/en/man1/nmap.1.html)
+<br>
+
+## Level 17 → Level 18
+
+Compare files line by line.
+
+commands: `diff <file1> <file2>`
+
+> ❗ should log into bandit16 first.
+
+```sh
+$ diff passwords.old passwords.new
+```
+
+> `%<` &emsp; lines from FILE1 \
+> `%>` &emsp; lines from FILE2 \
+> `%=` &emsp; lines common to FILE1 and FILE2
+
+<!-- hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg -->
+<br>
+
+## Level 18 → Level 19
+
+Read file directly through SSH login.
+
+commands: `ssh`, `cat`
+
+```sh
+$ ssh bandit18@bandit.labs.overthewire.org -p 2220 "cat readme"
+```
+
+<!-- awhqfNnAbc1naukrpqDYcF95h7HoMTrC -->
+<br>
+
+## Level 19 → Level 20
+
+Just use the setuid binary as told.
+
+> 💡Hint: I figure that the binary is like the `sudo` command but for bandit20 user, not super-user 🤓
+
+commands: `cat`
+
+```sh
+$ ./bandit20-do cat /etc/bandit_pass/bandit20
+```
+
+<!-- VxCazJaVykI6W36BkBU0mJTCM8rR95XT -->
+<br>
+
+## Level 20 → Level 21
+
+Connect to your own network daemon. [Read this](https://stackoverflow.com/questions/51775230/what-does-connecting-to-own-network-daemon-mean)
+
+commands: `nc -l <port>`
+
+```sh
+# You need to open 2 terminal tabs
+# 00 - 1st tab
+$ nc -l <port>
+
+# 01 - 2nd tab
+$ ./suconnect <port>
+
+# 02 - paste the password on the 1st tab
+```
+
+<!-- NvEJF7oVjkddltPSrdKEFOllh9V1IBcq -->
 <br>
 
 <!-- ## Level X → Level X

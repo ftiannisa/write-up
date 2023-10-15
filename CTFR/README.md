@@ -1,9 +1,8 @@
 # WRITE-UP FOR CTFR - RasyidMF
 
-<b>by [verreaux](https://rasyidmf.com/Users/?id=769)</b><br><br>
-Website: ~~https://rasyidmf.com/~~ [not accessible anymore ☹ - Oct '23]
+**by [verreaux](https://rasyidmf.com/Users/?id=769)**
 
-<br>
+Website: ~~https://rasyidmf.com/~~ [not accessible anymore ☹ - Oct '23]
 
 |               Category                | Challenges                                         |
 | :-----------------------------------: | :------------------------------------------------- |

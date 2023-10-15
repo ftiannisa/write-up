@@ -1,6 +1,7 @@
 # WRITE-UP FOR Fostifest 2022 ![event](https://img.shields.io/badge/-event-blue?style=flat)
 
-<b>by ANAK PUNK DEPOK</b><br><br>
+**by ANAK PUNK DEPOK**
+
 Capture the Flag (CTF) FOSTIFEST 2022 merupakan sebuah
 kompetisi keamanan jaringan dan keamanan informasi yang
 diselenggarakan oleh Forum Open Source Teknik Informatika

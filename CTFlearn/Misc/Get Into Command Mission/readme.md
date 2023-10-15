@@ -1,12 +1,16 @@
 # [Get Into Command Mission](https://ctflearn.com/challenge/278)
+
 ### Category: Misc
+
 ###### Difficulty: Hard - 70 pts
 
 Back into the mission. Since we struck one fugitive successfully, we found an ID Card named ALDI and a flashdisk which contain a [program](https://mega.nz/#!KXYEQaIJ!ima4afmEP59Z1kKTm0H-3vO2x2UPdvNYKhUDdb3Vbr0). Unfortunately, it was locked. Note: You do NOT need a specific operating system to solve this question.
 <br><br>
+
 ### Solution:
 
-We're given a program that take 2 inputs, username and password. If we give the wrong inputs, it will prints "Access denied." like this<br>
+We're given a program that take 2 inputs, username and password. If we give the wrong inputs, it will prints "Access denied." like this
+
 ```
 ┌──(fr㉿LAPTOP)-[/ctflearn]
 └─$ ./program.exe
@@ -20,14 +24,14 @@ program.exe USERNAME PASSWORD
 └─$ ./program.exe idk pls
 Access denied.
 ```
-<br>
-I use IDA to analyze the program and found these two value.
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/72020667/223500067-08262bdd-ef66-470f-94f2-3bfc674438f7.png"/>
-</p>
-Frankly, I'm not really good at analyzing program with IDA😅 so I assume it's the username and password that we're looking for, then input it to the program. The program then gave us a really looonggg base64 string which we should decode to get a png file and hopefully we will get the flag. To do this, I made a Python script:<br>
 
-``` Python
+I use IDA to analyze the program and found these two value.
+
+![](https://user-images.githubusercontent.com/72020667/223500067-08262bdd-ef66-470f-94f2-3bfc674438f7.png)
+
+Frankly, I'm not really good at analyzing program with IDA😅 so I assume it's the username and password that we're looking for, then input it to the program. The program then gave us a really looonggg base64 string which we should decode to get a png file and hopefully we will get the flag. To do this, I made a Python script:
+
+```Python
 #!/usr/bin/env python
 import base64
 
@@ -40,18 +44,5 @@ img = open('flag.png', 'wb')
 img.write(data)
 img.close()
 ```
-<br>
-and here's the pic! Put it in format and you get the flag ᐠ( ᐛ )ᐟ
 
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/72020667/223528395-a310b8f5-a552-405e-ab98-4440264c53f1.png"/>
-</p>
-
-### FLAG
-
-<details>
-  <summary></summary>
-  
-  CTFlearn{Arm0ur_pPTi4}
-
-</details>
+Open the pic, put it in the flag format and you get the flag ᐠ( ᐛ )ᐟ

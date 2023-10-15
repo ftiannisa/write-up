@@ -15,14 +15,13 @@ Don't know where to begin? Check out CTFlearn's [SQL Injection Lab](https://ctfl
 
 Di dalam web ini ada sebuah input form, yang mana hasil inputannya ini akan dimasukkan ke dalam suatu query SQL.
 
-<p align="center">
-    <img src="../../../media/ctfl-bi1.png"/>
-</p>
+![](/media/ctfl-bi1.png)
+
 Di sini saya coba input kata 'admin' dan query SQL akan menampilkan data yang memiliki nama 'admin', tetapi hasilnya "0 results" yang berarti database tersebut tidak memiliki data dengan nama 'admin'.
 Sekarang kita coba lagi menggunakan input yang sudah dicontohkan pada lab.
-<p align="center">
-    <img src="../../../media/ctfl-bi-result.png"/>
-</p>
+
+![](/media/ctfl-bi-result.png)
+
 Menginput "admin' or '1' = '1" (tanpa tanda kutip ganda, ya) dan hasilnya keluar
 <br>
 <br>
@@ -30,22 +29,13 @@ Menginput "admin' or '1' = '1" (tanpa tanda kutip ganda, ya) dan hasilnya keluar
 
 Let's try inputting a random word, in this case I input 'admin'.
 
-<p align="center">
-    <img src="../../../media/ctfl-bi1.png"/>
-</p>
+![](/media/ctfl-bi1.png)
+
 As you can see, it shows "0 results". It's because the database doesn't have any data with 'admin' as its name value. Now let's try the method that we've learned from the lab.
-<p align="center">
-    <img src="../../../media/ctfl-bi-result.png"/>
-</p>
+
+![](/media/ctfl-bi-result.png)
+
 I input "admin' or '1' = '1" (without double quotes) and it works! :D
-<br><br>
 
-### FLAG
-
-<details>
-  <summary></summary>
-  
-  CTFlearn{th4t_is_why_you_n33d_to_sanitiz3_inputs}
-</details>
 <br><br>
 🏷️tags: SQLI

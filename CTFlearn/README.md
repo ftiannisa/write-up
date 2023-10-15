@@ -1,6 +1,7 @@
 # WRITE-UP FOR CTFlearn
 
-<b>by [verreaux](https://ctflearn.com/user/verreaux)</b><br><br>
+**by [verreaux](https://ctflearn.com/user/verreaux)**
+
 Website: https://ctflearn.com/
 
 Category:

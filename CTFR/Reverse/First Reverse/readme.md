@@ -2,7 +2,7 @@
 
 ### Category: Reverse Engineering
 
-###### Difficulty: ??? - 250 pts
+###### Difficulty: Easy - 250 pts
 
 Pertama kali mencoba reverse ? Tools yang disarankan adalah **Ghidra**, **IDA Pro**, **Radare2**, **GDB**. Untuk menyelesaikan ini anda harus mendownload file dibawah ini
 
@@ -42,22 +42,11 @@ first_reverse: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamica
 Biasanya untuk not stripped binary, nama fungsi, variabel, dsb. itu masih sama seperti kode asli. Jadi kita bisa baca dan identifikasi hasil debug dengan lebih mudah dan jelas.
 Langsung aja load binary-nya di debugger. Di sini saya pake IDA ya
 
-<p align="center">
-    <img src="../../../media/ctfr-1strev.png"/>
-</p>
+![](/media/ctfr-1strev.png)
+
 Setelah di-load, langsung keliatan sih flagnya hehe atau kalau mau lebih simple, bisa pake command ini terminal
 
 `strings first_reverse | grep -i ctfr `
 
 - `strings` menampilkan karakter printable yang ada di dalam file
 - `grep` untuk melakukan pencarian text dan `-i` mengabaikan case sensitive
-  <br>
-  <br>
-
-### FLAG
-
-<details>
-  <summary></summary>
-  
-CTFR{f1rst_fl4g_f0r_r3v3rs3}
-</details>
