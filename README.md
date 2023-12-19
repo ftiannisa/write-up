@@ -5,15 +5,29 @@
 Language: English and (mostly) Indonesian :indonesia:<br>
 **This is for archival and educational purpose.**
 
-Websites for practice:
+## About CTF 🚩
 
-- [Root.Me](https://www.root-me.org/?page=news&lang=en)
-- [CTFR - Rasyid](/CTFR/)
+- _What is CTF?_ by CTFTime [Read](https://ctftime.org/ctf-wtf/)
+- _Apa itu CTF?_ by Mr. Yohanes [Read](https://yohan.es/ctf/)
+
+## Websites for practice:
+
 - [CTFlearn](/CTFlearn/)
-- [picoCTF](/picoCTF/)
 - [echoCTF](https://echoctf.red/)
-- [Cryptohack](https://cryptohack.org/) [Crypto]
-- [pwn.college](/pwn.college/) [PWN]
+- [picoCTF](/picoCTF/)
+- [Root.Me](https://www.root-me.org/?page=news&lang=en)
+- [CTFR - Rasyid](/CTFR/) (Web isn't accessible anymore)
+
+### Binary Exploitation / PWN
+
+- [pwn.college](/pwn.college/)
+
+### Cryptography
+
+- [Cryptohack](https://cryptohack.org/)
+
+### Others.
+
 - [Lord of SQLInjection](https://los.rubiya.kr) [SQLI]
 - [OverTheWire](/OverTheWire/) [Wargame]
 
@@ -23,6 +37,7 @@ Websites for practice:
 | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 🚩2021 | - [MetaRed 2021 - 5th Stage](/MetaRed%202021%20-%205th%20Stage/), CTFTime <br> - [Hackfest0x5](/Hackfest0x5/), Local                                                        |
 | 🚩2022 | - [Hology 5.0](/Hology%205.0/), Local <br> - [Fostifest](/Fostifest%202022/), Local<br> - [PekanIT](/Pekan%20IT%202022/), Local <br> - [Gemastik](/Gemastik%202022/), Local |
+| 🚩2023 | - [TCP1P](/TCP1P%20CTF%202023/), CTFTime <br> - Pointer Overflow 2023                                                                                                       |
 
 <br>
 
