@@ -12,8 +12,8 @@ General CTF URL: https://backdoor.infoseciitr.in/
 
 CTFTime: https://ctftime.org/event/2153
 
-| Category  | Challenges                                  |
-| --------- | ------------------------------------------- |
-| Forensics | Sonic-Hide_and-Seek                         |
-| Web       | [too-many-admins](/BackdoorCTF%202023/Web/) |
-| Reverse   | - Open Sesame <br> - Secret Door            |
+| Category  | Challenges                                                                                                                   |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Forensics | [Sonic-Hide_and-Seek](/BackdoorCTF%202023/Forensics/)                                                                        |
+| Web       | [too-many-admins](/BackdoorCTF%202023/Web/)                                                                                  |
+| Reverse   | - [Open Sesame](/BackdoorCTF%202023/Reverse/Open%20Sesame/) <br> - [Secret Door](/BackdoorCTF%202023/Reverse/Secret%20Door/) |
